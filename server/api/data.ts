@@ -1,5 +1,10 @@
 export default defineEventHandler((event) => {
-    return {
-        hello: 'world'
-    }
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            // resolve( {
+            //     hello: 'world'
+            // })
+            reject("some kind")
+        },3000)
+    })
 })
