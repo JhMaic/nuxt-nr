@@ -1,5 +1,5 @@
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.hook('app:created', async () => {
+  nuxtApp.hook('page:start', async () => {
     const { BrowserAgent } = await import('@newrelic/browser-agent/loaders/browser-agent')
     const { JSErrors } = await import('@newrelic/browser-agent/features/jserrors')
     const { Spa } = await import('@newrelic/browser-agent/features/spa')
