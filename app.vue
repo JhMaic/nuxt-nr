@@ -1,9 +1,6 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <li>
+    <!--    only get recorded on local running -->
     <NuxtLink to="/about">
       About
     </NuxtLink>

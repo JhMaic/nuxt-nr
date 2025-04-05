@@ -1,5 +1,6 @@
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.hook('page:start', async () => {
+  nuxtApp.hook('app:created', async () => {
+    console.log('logging...')
     const { BrowserAgent } = await import('@newrelic/browser-agent/loaders/browser-agent')
     const { JSErrors } = await import('@newrelic/browser-agent/features/jserrors')
     const { Spa } = await import('@newrelic/browser-agent/features/spa')
@@ -9,6 +10,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         distributed_tracing: { enabled: true },
         privacy: { cookies_enabled: true },
         ajax: { deny_list: ['bam.nr-data.net'] },
+        feature_flags: ['soft_nav'],
       },
       loader_config: {
         accountID: '6579780',
