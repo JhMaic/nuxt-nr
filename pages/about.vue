@@ -1,7 +1,8 @@
 <script setup lang="ts">
-async function onClicked() {
-  const data = await useFetch('/api/data')
-  console.log(data)
+function onClicked() {
+  // const data = await useFetch('/api/data')
+  // 都可以检测到
+  throw new Error('Some type error')
 }
 </script>
 

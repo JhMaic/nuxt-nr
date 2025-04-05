@@ -1,6 +1,6 @@
 <script setup lang="ts">
-function onClicked() {
-  // useBrowserAgent().value.noticeError(new Error('Error Page Accessed'))
+async function onClicked() {
+  useBrowserAgent().value.noticeError(new Error('Error Page Accessed'))
 }
 </script>
 
